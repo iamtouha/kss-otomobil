@@ -6,7 +6,19 @@
         <logo />
       </v-toolbar-title>
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" app> </v-navigation-drawer>
+    <v-navigation-drawer v-model="drawer" app>
+      <v-list>
+        <v-list-item
+          v-for="route in routes"
+          :key="route.path"
+          :to="route.path"
+          nuxt
+          exact
+        >
+          {{ route.name }}
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
     <v-main>
       <nuxt />
     </v-main>
@@ -17,7 +29,17 @@
 export default {
   name: "DefaultLayout",
   data: () => ({
-    drawer: null
+    drawer: null,
+    routes: [
+      {
+        name: "Home",
+        path: "/"
+      },
+      {
+        name: "Auction",
+        path: "/auction"
+      }
+    ]
   })
 };
 </script>

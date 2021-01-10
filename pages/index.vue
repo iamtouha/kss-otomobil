@@ -1,5 +1,7 @@
 <template>
-  <v-container></v-container>
+  <v-container>
+    <h1>KSS Otomobils</h1>
+  </v-container>
 </template>
 
 <script>

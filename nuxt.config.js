@@ -6,7 +6,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: "%s - kss-otomobil",
+    titleTemplate: "%s - Kss Otomobil",
     title: "kss-otomobil",
     meta: [
       { charset: "utf-8" },
@@ -38,7 +38,9 @@ export default {
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    baseURL: process.env.BASE_URL || "http://localhost:1337"
+  },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
